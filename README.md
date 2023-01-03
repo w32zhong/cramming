@@ -46,11 +46,11 @@ curl micro.mamba.pm/install.sh | bash
 micromamba create -n cramming
 micromamba activate cramming
 micromamba install --yes libcufile=1.4.0.31 -c nvidia
+micromamba install --yes pytorch pytorch-cuda=11.7 -c pytorch -c nvidia -c anaconda
 # install lower GCC version for the FLASH attention to work
 micromamba install --yes gcc_linux-64 -c "conda-forge/label/gcc7"
 micromamba install --yes gxx_linux-64 -c "conda-forge/label/gcc7"
 pip install flash-attn
-micromamba install --yes pytorch pytorch-cuda=11.7 -c pytorch -c nvidia -c anaconda
 micromamba install --yes -c conda-forge hydra-core transformers einops openssl \
     tokenizers=0.10.3 psutil multiprocess arrow-cpp=10.0.* pyarrow=10.0.* datasets
 ```
