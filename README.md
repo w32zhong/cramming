@@ -44,6 +44,7 @@ Here is an example to set up a Mamba environment for this project:
 ```sh
 curl micro.mamba.pm/install.sh | bash
 micromamba create -n cramming
+micromamba activate cramming
 micromamba install --yes libcufile=1.4.0.31 -c nvidia
 # install lower GCC version for the FLASH attention to work
 micromamba install --yes gcc_linux-64 -c "conda-forge/label/gcc7"
